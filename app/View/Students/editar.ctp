@@ -4,5 +4,5 @@
 	echo $this->Form->input('id',array('type'=>'hidden'));
 	echo $this->Form->input('nombre');
 	echo $this->Form->input('last_name');
-	echo $this->Form->end('Guardar estudiantes');
+	echo $this->Form->end('Editar estudiante');
  ?>

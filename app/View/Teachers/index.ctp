@@ -10,11 +10,12 @@
 	</tr>
 	<?php foreach ($Profesores as $value) { ?>
 		<tr>
-			<td><?= echo $value['Teacher']['id'] ?></td>
-			<td><?= echo $value['Teacher']['nombre'] ?></td>
-			<td><?= echo $value['Teacher']['apellido'] ?></td>
-			<td><?= echo $value['Teacher']['cv'] ?></td>
-			<td><?= echo $this->Html->link('editar', array('action'=> 'editar',$value['Teacher']['id'] ));?>&nbsp;</td>
+			<td><?=  $value['Teacher']['id'] ?></td>
+			<td><?= $value['Teacher']['nombre'] ?></td>
+			<td><?=  $value['Teacher']['apellido'] ?></td>
+			<td><?= $value['Teacher']['cv'] ?></td>
+			<td><?= $this->Html->link('editar', array('action'=> 'editar',$value['Teacher']['id'] ));?>&nbsp;</td>
 		</tr>
 	<?php } ?>
 </table>
+

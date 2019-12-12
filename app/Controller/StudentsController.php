@@ -34,10 +34,10 @@
 	    	if ($this->request->is('get')) {
 	    		$this->request->data = $this->Student->read();
 	    	}else if ($this->Student->save($this->request->data)) {
-	    		$this->Session-> setFlash('Estudiante '. $this->request->data['Student']['nombre'] .'  Guardado');
+	    		$this->Session-> setFlash('Estudiante '. $this->request->data['Student']['nombre'] .'  Editado');
 	    		$this->redirect (array('action'=>'index'));
 	    	}else {
-	    		$this->Session-> setFlash('Estudiante NO Guardado');
+	    		$this->Session-> setFlash('Estudiante NO Editado');
 	    	}
 		}
 

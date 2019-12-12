@@ -13,13 +13,15 @@
 foreach ($estudiantes as $value) {
 	?>
 	<tr>
-		<td><?php echo $value['Student']['id'];	?></td>
-		<td><?php echo $value['Student']['nombre'];	?></td>
-		<td><?php echo $value['Student']['last_name'];	?></td>
-		<td><?php echo $this->Html->link('editando', array('action'=> 'editar',$value['Student']['id'] ));	?>&nbsp;
-		<?php echo $this->Form->postLink('Elimando', 
+		<td><?= $value['Student']['id'];	?></td>
+		<td><?= $value['Student']['nombre'];	?></td>
+		<td><?= $value['Student']['last_name'];	?></td>
+		<td><?= $this->Html->link('editar', array('action'=> 'editar',$value['Student']['id'] ));	?>&nbsp;
+		<?= $this->Form->postLink('Elimando', 
 										array('action'=> 'borrar',$value['Student']['id'] ),
-										array('confirm'=> 'Realmente deseas borrar')); ?></td>
+										array('confirm'=> 'Estas de seguro de borrar a '.
+										$value['Student']['nombre']
+										)); ?></td>
 		</td>
 	</tr>
 
